@@ -27,6 +27,8 @@ The `lib` folder contains all libraries you need for the project.
 
 ## Usage
 
+### 1) Config modules
+
 Open `config.js` and define the list of modules you want to use:
 
 ```
@@ -48,4 +50,18 @@ Then open `app.js` to define routing:
     templateUrl: 'modules/login/views/index.html',
     controller: 'LoginController'
 })
+```
+
+### 2) Loading module's controllers
+
+In your module folder, there is a `module.js` file, in this file, you have to define your module:
+
+`angular.module('LoginModule', ['ui.router']);`
+
+And load all module's controller with `bulkLoad` method
+
+```
+bulkLoad([
+    'modules/login/controllers/loginController.js'
+]);
 ```
