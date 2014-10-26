@@ -7,14 +7,14 @@ This is the example implement of module-based app for AngularJS.
 
 ```
 + your-app
-       - lib
-                - (angularjs and other libs here)               
-       - js
-                - config.js
-                - app.js 
-       - modules
-                - module-1
-                - module-2
+    - lib
+        - (angularjs and other libs here)
+    - js
+        - config.js
+        - app.js
+    - modules
+        - module-1
+        - module-2
 ```
 
 The `lib` folder contains all libraries you need for the project.
@@ -44,8 +44,8 @@ Then open `app.js` to define routing:
 
 ```
 .state('login', {
-                url: '/login',
-                templateUrl: 'modules/login/views/index.html',
-                controller: 'LoginController'
-            })
+    url: '/login',
+    templateUrl: 'modules/login/views/index.html',
+    controller: 'LoginController'
+})
 ```
